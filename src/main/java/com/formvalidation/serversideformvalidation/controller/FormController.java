@@ -22,7 +22,6 @@ public class FormController {
     @PostMapping("/submit")
     public String onSubmit(@Valid @ModelAttribute("user") User user, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
-            System.out.println(bindingResult);
             return "form";
         }
         System.out.println(user);
